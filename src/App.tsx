@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import NotFound from '@/pages/not-found';
+const NotFound = () => <div style={{minHeight:'100vh',display:'flex',alignItems:'center',justifyContent:'center',background:'#000',color:'#fff',fontFamily:'monospace',flexDirection:'column'}}><h1 style={{fontSize:'4rem',margin:0}}>404</h1><p style={{color:'#888'}}>Page not found</p></div>;
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 import BrainAgentPage from '@/pages/BrainAgentPage';
 
