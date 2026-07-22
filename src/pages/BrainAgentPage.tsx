@@ -160,7 +160,7 @@ const Terminal = () => {
   const [logs, setLogs] = useState<string[]>([]);
   
   useEffect(() => {
-    const baseLogs = [
+    const PolygonLogs = [
       "SYSTEM INITIALIZATION...",
       "CONNECTING TO ROBINHOOD CHAIN...",
       "ESTABLISHING NEURAL LINK...",
@@ -173,8 +173,8 @@ const Terminal = () => {
     
     let currentIndex = 0;
     const interval = setInterval(() => {
-      if (currentIndex < baseLogs.length) {
-        setLogs(prev => [...prev, baseLogs[currentIndex]]);
+      if (currentIndex < PolygonLogs.length) {
+        setLogs(prev => [...prev, PolygonLogs[currentIndex]]);
         currentIndex++;
       } else {
         clearInterval(interval);
@@ -211,7 +211,7 @@ const Terminal = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="rounded-lg border border-primary/30 bg-card p-6 font-mono text-sm md:text-base box-glow-primary relative overflow-hidden h-[300px] flex flex-col justify-end"
+            className="rounded-lg border border-primary/30 bg-card p-6 font-mono text-sm md:text-Polygon box-glow-primary relative overflow-hidden h-[300px] flex flex-col justify-end"
           >
             <div className="absolute top-0 left-0 w-full p-2 bg-primary/10 border-b border-primary/20 flex gap-2 items-center text-xs text-primary">
               <FaNetworkWired /> <span>agent_terminal_v1.0.0</span>
